@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="LoginData" format="java">
+      <types:shape format="java" element="friendchatapi.LoginData"/>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#34b08349-bf39-492f-9df7-bb99a489ecb7">
+    <types:operation-declaration>
+      <types:inputs>
+        <types:parameter name="instance" type="LoginData"/>
+      </types:inputs>
+    </types:operation-declaration>
+  </types:enrichment>
+</types:mule>

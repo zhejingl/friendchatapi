@@ -1,0 +1,34 @@
+#%RAML 1.0
+title: New API
+types:
+  credential:
+    properties:
+      user:
+        example: Example
+        type: string
+      password:
+        example: Example
+        type: string
+  loginreturn:
+    properties:
+      token:
+        example: Example
+        type: string
+      enabled:
+        items:
+          example: Example
+          type: string
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/2d43570a-3855-40ef-9f0d-8ad12c03247d/
+mediaType:
+  - application/json
+protocols:
+  - HTTP
+/v1/api/demo/social/login:
+  post:
+    body: {}
+    responses:
+      "200":
+        body:
+          application/json:
+            type: loginreturn
+    securedBy: []
